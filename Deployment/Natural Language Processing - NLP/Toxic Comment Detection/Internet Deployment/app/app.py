@@ -85,5 +85,5 @@ if __name__ == '__main__':
 	# Load model yang telah ditraining
 	model = load('model_toxic_tfidf_nb.model')
 
-	# Run Flask di Internet
+	# Run Flask di localhost 
 	app.run(host="0.0.0.0", port=80, debug=True)
