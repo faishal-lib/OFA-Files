@@ -4,6 +4,10 @@
 The Natural Language Processing (NLP) application was made to filter out negative (toxic) words on social media so users will feel safer and more comfortable surfing the internet.
 
 
+## Mandatory Condition
+
+I exemplify the Deployment using RDP (Virtual Machine Azure). Make sure you have RDP too, it's not mandatory from Azure but you can also create RDP on AWS, Digital Ocean, Vultr etc
+
 ## Features
 
 - Toxic Comment Filtering with Label
@@ -25,7 +29,7 @@ Install Requirements
   pip install Sastrawi==1.0.1
 ```
     
-## Run Locally
+## Config Internet Access & Run
 
 Clone the project
 
@@ -39,6 +43,21 @@ Go to the project directory
   cd app
 ```
 
+Reconfig app.py (BEFORE)
+
+```bash
+  	# Run Flask di Internet
+	app.run(host="localhost", port=5000, debug=True)
+```
+
+Reconfig app.py (AFTER)
+
+```bash
+  	# Run Flask di Internet
+	app.run(host="0.0.0.0", port=80, debug=True)
+```
+
+Save app.py config
 
 Start the server
 
@@ -49,15 +68,16 @@ Start the server
 
 ## Activated Server
 
-![image](https://user-images.githubusercontent.com/25089714/206855626-dbdbb92b-f35b-4e65-a677-27758f0991d8.png)
+![image](https://user-images.githubusercontent.com/25089714/206856955-cc6c9f02-e939-4d40-909a-ea46272a217f.png)
+
 
 ## Application Interface
-![image](https://user-images.githubusercontent.com/25089714/206855630-0c0fd0c6-3624-4955-b35b-908ca3323425.png)
+![image](https://user-images.githubusercontent.com/25089714/206856960-7b8f8e4f-cf3e-444e-9013-b7798c146e50.png)
 
-![image](https://user-images.githubusercontent.com/25089714/206855643-b43c022c-ba20-43c1-acdd-de04a57e303d.png)
+![image](https://user-images.githubusercontent.com/25089714/206856972-226b3d9d-fa3c-4faa-9d4f-9f3de4b9e4b5.png)
 
 
-## Thanks to :
+## Thanks
 
 Orbit Future Academy & Coach - Visioner 5
 
